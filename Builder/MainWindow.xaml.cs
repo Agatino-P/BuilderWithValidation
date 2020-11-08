@@ -23,7 +23,7 @@ namespace Builder
         {
             InitializeComponent();
             Buildable buildableOne = new Buildable.Builder().FromInt(1).Build();
-            //Invalid, Private Buildable buildableTwo = new Buildable();
+            //Buildable buildableTwo = new Buildable(); //(Invalid, Private) 
             Buildable buildableThree = new Buildable.Builder().FromInt(3).Build();
         }
     }
