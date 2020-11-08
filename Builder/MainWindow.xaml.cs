@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Ioc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,10 @@ namespace Builder
         public MainWindow()
         {
             InitializeComponent();
+            SimpleIoc.Default.Register<IIface,Iface>();
+
+            IocConsumer iocConsumer = new IocConsumer();
+            int a = iocConsumer.D(3);
             Buildable buildableOne = new Buildable.Builder().FromInt(1).Build();
             //Buildable buildableTwo = new Buildable(); //(Invalid, Private) 
             Buildable buildableTwo = new Buildable.Builder().Build();
