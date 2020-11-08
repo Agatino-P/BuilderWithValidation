@@ -24,6 +24,7 @@ namespace Builder
             InitializeComponent();
             Buildable buildableOne = new Buildable.Builder().FromInt(1).Build();
             //Buildable buildableTwo = new Buildable(); //(Invalid, Private) 
+            Buildable buildableTwo = new Buildable.Builder().Build();
             Buildable buildableThree = new Buildable.Builder().FromInt(3).Build();
         }
     }
